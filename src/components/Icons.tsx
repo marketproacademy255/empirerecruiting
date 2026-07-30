@@ -85,6 +85,12 @@ export const GlobeIcon = (props: IconProps) => (
   </svg>
 );
 
+export const PhoneIcon = (props: IconProps) => (
+  <svg {...base(props)}>
+    <path d="M5.5 4h2.8l1.2 3.6-1.8 1.6a10.5 10.5 0 0 0 5.1 5.1l1.6-1.8 3.6 1.2v2.8c0 1-.9 1.7-1.8 1.5-3.3-.6-6.4-2.3-8.8-4.7-2.4-2.4-4.1-5.5-4.7-8.8C3.8 4.9 4.5 4 5.5 4z" />
+  </svg>
+);
+
 export const MailIcon = (props: IconProps) => (
   <svg {...base(props)}>
     <rect x="3" y="5.5" width="18" height="13" rx="2" />

@@ -1,5 +1,7 @@
 import styles from "./FutureContact.module.css";
-import { MailIcon, GlobeIcon, MapPinIcon } from "./Icons";
+import { PhoneIcon, MailIcon, GlobeIcon, MapPinIcon } from "./Icons";
+
+const PHONE_NUMBERS = ["+998 77 680 90 90", "+998 77 680 28 00"];
 
 const FUTURE_ITEMS = [
   {
@@ -46,6 +48,20 @@ function FutureContact() {
         </div>
 
         <div className={styles.contactGrid}>
+          <div className={styles.contactCard}>
+            <div className={styles.iconWrap}>
+              <PhoneIcon />
+            </div>
+            <div>
+              <h4>Telefon</h4>
+              {PHONE_NUMBERS.map((number) => (
+                <a key={number} href={`tel:${number.replace(/\s/g, "")}`}>
+                  {number}
+                </a>
+              ))}
+            </div>
+          </div>
+
           <div className={styles.contactCard}>
             <div className={styles.iconWrap}>
               <MailIcon />
