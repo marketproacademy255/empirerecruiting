@@ -1,0 +1,70 @@
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  margin-top: 48px;
+}
+
+.colTitle {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  font-family: var(--font-sans);
+  font-weight: 700;
+}
+
+.problemCard {
+  border-left: 3px solid var(--color-border);
+  border-top: 1px solid var(--color-border);
+  border-right: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  border-left-color: var(--color-accent);
+  border-radius: var(--radius-sm);
+  padding: 20px 22px;
+  margin-bottom: 16px;
+  background: var(--color-bg);
+}
+
+.problemCard h4 {
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+}
+
+.problemCard p {
+  color: var(--color-text-soft);
+  font-size: 0.95rem;
+}
+
+.solutionGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.solutionCard {
+  background: var(--color-surface);
+  border-radius: var(--radius-sm);
+  padding: 20px 22px;
+}
+
+.solutionCard.wide {
+  grid-column: 1 / -1;
+}
+
+.solutionCard h4 {
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+}
+
+.solutionCard p {
+  color: var(--color-text-soft);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 860px) {
+  .columns {
+    grid-template-columns: 1fr;
+  }
+  .solutionGrid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,62 @@
+.footer {
+  background: #3d3a30;
+  color: rgba(250, 247, 241, 0.75);
+  padding: 48px 0 28px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid rgba(250, 247, 241, 0.12);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--color-bg);
+}
+
+.logoMark {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: var(--color-accent-soft);
+  color: #3d2b0f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-serif);
+  font-size: 1rem;
+}
+
+.links {
+  display: flex;
+  gap: 26px;
+  flex-wrap: wrap;
+}
+
+.links a {
+  font-size: 0.9rem;
+}
+
+.links a:hover {
+  color: var(--color-bg);
+}
+
+.bottom {
+  padding-top: 22px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 0.82rem;
+  color: rgba(250, 247, 241, 0.5);
+}
