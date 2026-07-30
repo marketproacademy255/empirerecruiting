@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -10,11 +11,14 @@ import Quality from "./components/Quality";
 import Team from "./components/Team";
 import FutureContact from "./components/FutureContact";
 import Footer from "./components/Footer";
+import ApplicationModal from "./components/ApplicationModal";
 
 function App() {
+  const [applyOpen, setApplyOpen] = useState(false);
+
   return (
     <>
-      <Header />
+      <Header onApply={() => setApplyOpen(true)} />
       <main>
         <Hero />
         <About />
@@ -25,9 +29,10 @@ function App() {
         <Clients />
         <Quality />
         <Team />
-        <FutureContact />
+        <FutureContact onApply={() => setApplyOpen(true)} />
       </main>
       <Footer />
+      <ApplicationModal open={applyOpen} onClose={() => setApplyOpen(false)} />
     </>
   );
 }

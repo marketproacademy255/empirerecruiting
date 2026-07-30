@@ -10,7 +10,11 @@ const NAV_LINKS = [
   { href: "#team", label: "Jamoa" },
 ];
 
-function Header() {
+type Props = {
+  onApply: () => void;
+};
+
+function Header({ onApply }: Props) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -30,7 +34,10 @@ function Header() {
         </nav>
 
         <div className={styles.actions}>
-          <a href="#contact" className="btn btn--primary">
+          <button type="button" className="btn btn--primary" onClick={onApply}>
+            Ariza qoldirish
+          </button>
+          <a href="#contact" className="btn btn--ghost">
             Bog'lanish
           </a>
           <button
@@ -54,7 +61,17 @@ function Header() {
             {link.label}
           </a>
         ))}
-        <a href="#contact" className="btn btn--primary" onClick={() => setOpen(false)}>
+        <button
+          type="button"
+          className="btn btn--primary"
+          onClick={() => {
+            setOpen(false);
+            onApply();
+          }}
+        >
+          Ariza qoldirish
+        </button>
+        <a href="#contact" className="btn btn--ghost" onClick={() => setOpen(false)}>
           Bog'lanish
         </a>
       </div>

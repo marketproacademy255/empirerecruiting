@@ -3,6 +3,10 @@ import { PhoneIcon, MailIcon, GlobeIcon, MapPinIcon } from "./Icons";
 
 const PHONE_NUMBERS = ["+998 77 680 90 90", "+998 77 680 28 00"];
 
+type Props = {
+  onApply: () => void;
+};
+
 const FUTURE_ITEMS = [
   {
     emoji: "🤖",
@@ -21,7 +25,7 @@ const FUTURE_ITEMS = [
   },
 ];
 
-function FutureContact() {
+function FutureContact({ onApply }: Props) {
   return (
     <section id="contact" className="section">
       <div className="container">
@@ -101,7 +105,10 @@ function FutureContact() {
         </p>
 
         <div className={styles.ctaRow}>
-          <a href="mailto:info@empirerecruiting.uz" className="btn btn--primary">
+          <button type="button" className="btn btn--primary" onClick={onApply}>
+            Ariza qoldirish
+          </button>
+          <a href="mailto:info@empirerecruiting.uz" className="btn btn--ghost">
             Biz bilan bog'laning
           </a>
         </div>

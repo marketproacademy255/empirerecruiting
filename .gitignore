@@ -13,6 +13,8 @@ dist-ssr
 *.local
 
 .claude/settings.local.json
+.env
+.netlify
 
 # Editor directories and files
 .vscode/*

@@ -134,6 +134,13 @@ export const CheckCircleIcon = (props: IconProps) => (
   </svg>
 );
 
+export const SendIcon = (props: IconProps) => (
+  <svg {...base(props)}>
+    <path d="M21 3 3 10.5l7 3 3 7z" />
+    <path d="M21 3 13.5 20.5l-3.5-7-7-3.5z" />
+  </svg>
+);
+
 export const DatabaseIcon = (props: IconProps) => (
   <svg {...base(props)}>
     <ellipse cx="12" cy="6" rx="7.5" ry="3" />
