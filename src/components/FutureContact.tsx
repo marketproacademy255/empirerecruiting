@@ -1,7 +1,8 @@
 import styles from "./FutureContact.module.css";
-import { PhoneIcon, MailIcon, GlobeIcon, MapPinIcon } from "./Icons";
+import { PhoneIcon, MailIcon, GlobeIcon, MapPinIcon, TelegramIcon } from "./Icons";
 
 const PHONE_NUMBERS = ["+998 77 680 90 90", "+998 77 680 28 00"];
+const TELEGRAM_LINK = "https://t.me/impire_hr";
 
 type Props = {
   onApply: () => void;
@@ -68,6 +69,18 @@ function FutureContact({ onApply }: Props) {
 
           <div className={styles.contactCard}>
             <div className={styles.iconWrap}>
+              <TelegramIcon />
+            </div>
+            <div>
+              <h4>Telegram</h4>
+              <a href={TELEGRAM_LINK} target="_blank" rel="noopener noreferrer">
+                @impire_hr
+              </a>
+            </div>
+          </div>
+
+          <div className={styles.contactCard}>
+            <div className={styles.iconWrap}>
               <MailIcon />
             </div>
             <div>
@@ -108,8 +121,13 @@ function FutureContact({ onApply }: Props) {
           <button type="button" className="btn btn--primary" onClick={onApply}>
             Ariza qoldirish
           </button>
-          <a href="mailto:info@empirerecruiting.uz" className="btn btn--ghost">
-            Biz bilan bog'laning
+          <a
+            href={TELEGRAM_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn--ghost"
+          >
+            Telegramda bog'laning
           </a>
         </div>
       </div>

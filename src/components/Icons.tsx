@@ -141,6 +141,13 @@ export const SendIcon = (props: IconProps) => (
   </svg>
 );
 
+export const TelegramIcon = (props: IconProps) => (
+  <svg {...base(props)}>
+    <path d="M21 4.5 3.5 11.2c-.9.35-.9 1.65.02 1.98l4.1 1.45 1.6 5c.2.6 1 .74 1.4.24l2.1-2.6 4.3 3.2c.7.52 1.7.14 1.87-.72l3-14.4c.16-.8-.6-1.5-1.4-1.85z" />
+    <path d="M8.7 14.4l9.3-7.6-8 8.4" />
+  </svg>
+);
+
 export const DatabaseIcon = (props: IconProps) => (
   <svg {...base(props)}>
     <ellipse cx="12" cy="6" rx="7.5" ry="3" />
