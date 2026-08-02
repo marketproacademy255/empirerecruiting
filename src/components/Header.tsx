@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styles from "./Header.module.css";
-import { MenuIcon, CloseIcon } from "./Icons";
+import { MenuIcon, CloseIcon, SunIcon, MoonIcon } from "./Icons";
+import { useTheme } from "../hooks/useTheme";
 
 const NAV_LINKS = [
   { href: "#about", label: "Biz haqimizda" },
@@ -16,6 +17,7 @@ type Props = {
 
 function Header({ onApply }: Props) {
   const [open, setOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <header className={styles.header}>
@@ -34,6 +36,14 @@ function Header({ onApply }: Props) {
         </nav>
 
         <div className={styles.actions}>
+          <button
+            type="button"
+            className={styles.themeBtn}
+            aria-label={theme === "dark" ? "Kunduzgi rejimga o'tish" : "Tungi rejimga o'tish"}
+            onClick={toggleTheme}
+          >
+            {theme === "dark" ? <SunIcon /> : <MoonIcon />}
+          </button>
           <button type="button" className="btn btn--primary" onClick={onApply}>
             Ariza qoldirish
           </button>

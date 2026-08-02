@@ -78,6 +78,7 @@
   z-index: 1;
   margin: 24px;
   background: rgba(250, 247, 241, 0.95);
+  color: #3d3a30;
   border-radius: var(--radius-md);
   padding: 22px;
   width: calc(100% - 48px);
@@ -93,7 +94,7 @@
 
 .cardText {
   font-size: 0.9rem;
-  color: var(--color-text-soft);
+  color: rgba(61, 58, 48, 0.72);
 }
 
 .badge {
