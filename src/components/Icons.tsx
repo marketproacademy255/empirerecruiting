@@ -148,6 +148,19 @@ export const TelegramIcon = (props: IconProps) => (
   </svg>
 );
 
+export const SunIcon = (props: IconProps) => (
+  <svg {...base(props)}>
+    <circle cx="12" cy="12" r="4.3" />
+    <path d="M12 2.5v2.6M12 18.9v2.6M4.3 4.3l1.85 1.85M17.85 17.85l1.85 1.85M2.5 12h2.6M18.9 12h2.6M4.3 19.7l1.85-1.85M17.85 6.15l1.85-1.85" />
+  </svg>
+);
+
+export const MoonIcon = (props: IconProps) => (
+  <svg {...base(props)}>
+    <path d="M20.2 14.7A8.6 8.6 0 1 1 9.3 3.8a7 7 0 0 0 10.9 10.9z" />
+  </svg>
+);
+
 export const DatabaseIcon = (props: IconProps) => (
   <svg {...base(props)}>
     <ellipse cx="12" cy="6" rx="7.5" ry="3" />

@@ -21,7 +21,7 @@
   font-family: var(--font-serif);
   font-weight: 700;
   font-size: 1.15rem;
-  color: var(--color-bg);
+  color: var(--color-cream);
 }
 
 .logoMark {
@@ -48,7 +48,7 @@
 }
 
 .links a:hover {
-  color: var(--color-bg);
+  color: var(--color-cream);
 }
 
 .bottom {
