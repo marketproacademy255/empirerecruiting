@@ -49,7 +49,7 @@
 
 .contactGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 20px;
   margin-top: 36px;
 }
@@ -61,6 +61,7 @@
   display: flex;
   gap: 14px;
   align-items: flex-start;
+  min-width: 0;
 }
 
 .iconWrap {
@@ -74,6 +75,11 @@
   flex-shrink: 0;
 }
 
+.contactInfo {
+  flex: 1;
+  min-width: 0;
+}
+
 .contactCard h4 {
   font-size: 0.95rem;
   font-family: var(--font-sans);
@@ -85,10 +91,16 @@
 .contactCard p {
   font-size: 0.92rem;
   color: var(--color-text-soft);
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .contactCard a {
   display: block;
+}
+
+.phoneNumber {
+  white-space: nowrap;
 }
 
 .closing {

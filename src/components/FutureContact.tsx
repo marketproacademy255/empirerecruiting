@@ -57,10 +57,10 @@ function FutureContact({ onApply }: Props) {
             <div className={styles.iconWrap}>
               <PhoneIcon />
             </div>
-            <div>
+            <div className={styles.contactInfo}>
               <h4>Telefon</h4>
               {PHONE_NUMBERS.map((number) => (
-                <a key={number} href={`tel:${number.replace(/\s/g, "")}`}>
+                <a key={number} href={`tel:${number.replace(/\s/g, "")}`} className={styles.phoneNumber}>
                   {number}
                 </a>
               ))}
@@ -71,7 +71,7 @@ function FutureContact({ onApply }: Props) {
             <div className={styles.iconWrap}>
               <TelegramIcon />
             </div>
-            <div>
+            <div className={styles.contactInfo}>
               <h4>Telegram</h4>
               <a href={TELEGRAM_LINK} target="_blank" rel="noopener noreferrer">
                 @impire_hr
@@ -83,7 +83,7 @@ function FutureContact({ onApply }: Props) {
             <div className={styles.iconWrap}>
               <MailIcon />
             </div>
-            <div>
+            <div className={styles.contactInfo}>
               <h4>Elektron pochta</h4>
               <a href="mailto:info@empirerecruiting.uz">
                 info@empirerecruiting.uz
@@ -95,7 +95,7 @@ function FutureContact({ onApply }: Props) {
             <div className={styles.iconWrap}>
               <GlobeIcon />
             </div>
-            <div>
+            <div className={styles.contactInfo}>
               <h4>Veb-sayt</h4>
               <p>www.empirerecruiting.uz</p>
             </div>
@@ -105,7 +105,7 @@ function FutureContact({ onApply }: Props) {
             <div className={styles.iconWrap}>
               <MapPinIcon />
             </div>
-            <div>
+            <div className={styles.contactInfo}>
               <h4>Manzil</h4>
               <p>Toshkent shahri</p>
             </div>
